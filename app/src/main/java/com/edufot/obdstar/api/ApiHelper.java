@@ -26,13 +26,13 @@ import com.edufot.obdstar.ui.ResponseActivity;
 
 public class ApiHelper extends Application {
     private static final String TAG = ApiHelper.class.getSimpleName();
-    private static final String mainURL = "https://api.eu.apiconnect.ibmcloud.com/hella-ventures-car-diagnostic-api/api";
+    private static final String mainURL = "http://malvah.atwebpages.com";
 
     /**
      * TODO: Input your authentication parameters here.
      */
-    private final String CLIENT_ID = "xxx";
-    private final String CLIENT_SECRET = "xxx";
+    private final String CLIENT_ID = "san@admin.com";
+    private final String CLIENT_SECRET = "san";
 
     private Context c;
 
@@ -98,7 +98,7 @@ public class ApiHelper extends Application {
      * @return error code translation url or null
      */
     public String getErrorCodeUrl(String dtc, String vin, String language){
-        String request = "dtc";
+        String request = "dtc/";
         String languageSF = getShortForm(language);
         if (languageSF!= null) {
             String[] params = {"code_id=" + dtc, "vin=" + vin, "language=" + languageSF, "client_id=" + CLIENT_ID , "client_secret=" + CLIENT_SECRET};
